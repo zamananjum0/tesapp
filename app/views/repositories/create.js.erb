@@ -1,0 +1,8 @@
+$("input#repo-input").val(" ")
+$("#myModal").modal("toggle")
+<% if !@repo.valid?%>
+  $("#errors").html("<%= j render(partial: 'repositories/errors', locals: {errors: @repo.errors.messages})%>")
+<%else%>
+  $("#errors").html(" ")
+  $("ul[data-id='repo-list-items']").append("<%= j render(partial: 'repositories/repo', locals: {repo: @repo})%>")
+<%end%>

@@ -1,0 +1,5 @@
+<ul class="list-group" data-id="repo-list-items">
+  <%repositories.each do |repo|%>
+    <%= render partial: "repositories/repo", locals: {repo: repo}%>
+  <%end%>
+</ul>
