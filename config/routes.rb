@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root "home#show"
+  root "https://github-prapp.herokuapp.com/home#show"
   get '/about', to: "home#about", as: "about"
   resources :issues
   resources :repositories
